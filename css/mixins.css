@@ -1,0 +1,57 @@
+.blocky {
+  content: '';
+  display: block;
+}
+.button {
+  content: '';
+  display: block;
+}
+.button:hover {
+  cursor: pointer;
+}
+.inline-blocky {
+  content: '';
+  display: inline-block;
+}
+.border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.nomargin {
+  padding: 0;
+  margin: 0;
+}
+.clear {
+  clear: both;
+}
+.centered {
+  margin: 0 auto;
+}
+.overflowed {
+  overflow: hidden;
+}
+.animate-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.animate-visible {
+  visibility: visible;
+  opacity: 1;
+}
+.force-hardware {
+  -webkit-transform: translate3d(0);
+  -moz-transform: translate3d(0);
+  transform: translate3d(0);
+}
+.img-centered-in-parent {
+  display: block;
+  min-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}

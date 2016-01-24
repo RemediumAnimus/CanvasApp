@@ -1,0 +1,224 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body {
+  /* Old browsers */
+  background: #ffe3c8;
+  /* FF3.6+ */
+  background: -moz-linear-gradient(-45deg, #ffe3c8 0%, #efad9e 45%, #c79797 65%, #a78a92 85%, #857d8d 100%);
+  /* Chrome,Safari4+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffe3c8), color-stop(45%, #efad9e), color-stop(65%, #c79797), color-stop(85%, #a78a92), color-stop(100%, #857d8d));
+  /* Chrome10+,Safari5.1+ */
+  background: -webkit-linear-gradient(-45deg, #ffe3c8 0%, #efad9e 45%, #c79797 65%, #a78a92 85%, #857d8d 100%);
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(-45deg, #ffe3c8 0%, #efad9e 45%, #c79797 65%, #a78a92 85%, #857d8d 100%);
+  /* IE10+ */
+  background: -ms-linear-gradient(-45deg, #ffe3c8 0%, #efad9e 45%, #c79797 65%, #a78a92 85%, #857d8d 100%);
+  /* W3C */
+  background: linear-gradient(135deg, #ffe3c8 0%, #efad9e 45%, #c79797 65%, #a78a92 85%, #857d8d 100%);
+  background-attachment: fixed;
+}
+.container {
+  bottom: 0;
+  padding-top: 10px;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+#field {
+  background: none;
+  display: block;
+  margin: 0px auto;
+  position: absolute;
+  bottom: 10px;
+  z-index: 5;
+}
+.chat {
+  width: 600px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.chat__writer {
+  float: right;
+  margin-bottom: 20px;
+  width: 500px;
+}
+.chat__writer input[type="text"] {
+  display: block;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 5px;
+  float: right;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.chat__writer input[type="submit"] {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  background: #5362a3;
+  color: #fff;
+}
+.chat__wrap {
+  float: right;
+  width: 500px;
+  height: 270px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+.chat__wrap #messages {
+  padding: 10px;
+}
+.chat__wrap #messages li {
+  margin-bottom: 10px;
+}
+.three {
+  width: 700px;
+  height: 495px;
+  background-size: contain;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+}
+.three__trunk {
+  width: 121px;
+  height: 232px;
+  background: url("img/trunk.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 255px;
+}
+.three__branch1 {
+  width: 344px;
+  height: 234px;
+  background: url("img/branch1.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 2;
+  bottom: 58px;
+  right: 13px;
+  animation-name: branch;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: 5% 40%;
+  animation-timing-function: ease-in-out;
+}
+.three__branch2 {
+  width: 294px;
+  height: 312px;
+  background: url("img/branch2.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  right: 111px;
+  animation-name: branch;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: 30% 100%;
+  animation-delay: .2s;
+  animation-timing-function: ease-in-out;
+}
+.three__branch3 {
+  width: 364px;
+  height: 365px;
+  background: url("img/branch3.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 2;
+  top: 22px;
+  left: 0px;
+  animation-name: branch;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: 100% 70%;
+  animation-delay: .3s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes branch {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.cloud-wrap {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  animation-name: wrapMove;
+  animation-duration: 20s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+.cloud {
+  background: url("img/cloud.png") no-repeat;
+  width: 300px;
+  height: 150px;
+  background-size: contain;
+  position: absolute;
+  left: 10%;
+  top: 100px;
+  opacity: 0.7;
+  animation-name: cloudMove;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-delay: 20s;
+  animation-timing-function: linear;
+}
+@keyframes cloudMove {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes wrapMove {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.floor {
+  background: #42454a;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+}
+.beach {
+  background: #42454a;
+  position: absolute;
+  background: url("img/grass2.png") 0px 0px;
+  background-size: contain;
+  height: 60px;
+  width: 100%;
+  z-index: 0;
+  bottom: 10px;
+  z-index: 4;
+}

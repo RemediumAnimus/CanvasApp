@@ -1,0 +1,210 @@
+.blocky {
+  content:'';
+  display:block;
+}
+.button {
+  .blocky;
+  &:hover {
+    cursor:pointer;
+  }
+}
+
+.inline-blocky {
+  content:'';
+  display:inline-block;
+}
+
+.border-box {
+  -webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+      box-sizing:border-box;
+}
+
+.nomargin {
+  padding:0;
+  margin:0;
+}
+
+.clear { clear:both; }
+.centered { margin:0 auto; }
+.overflowed { overflow:hidden; }
+
+.transition (@attr:all, @time: 0.12s, @type: ease-in-out) {
+  -webkit-transition: @attr @time @type;
+     -moz-transition: @attr @time @type;
+      -ms-transition: @attr @time @type;
+       -o-transition: @attr @time @type;
+          transition: @attr @time @type;
+}
+
+.placeholder(@color: #ccc) {
+
+  &:-moz-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+
+  &.placeholder { color: @color !important; }
+}
+
+.box-shadow (@x:0, @y:0, @blur:0, @color:#000) {
+	box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	-webkit-box-shadow: @arguments;
+}
+
+.box-shadow-2 (@x1:0, @y1:0, @blur1:0, @color1:#000, @x2:0, @y2:0, @blur2:0, @color2:#000, @x3:0, @y3:0, @blur3:0, @color3:#000) {
+	box-shadow: @x1 @y1 @blur1 @color1, @x2 @y2 @blur2 @color2, @x3 @y3 @blur3 @color3;
+	-moz-box-shadow: @x1 @y1 @blur1 @color1, @x2 @y2 @blur2 @color2, @x3 @y3 @blur3 @color3;
+	-webkit-box-shadow: @x1 @y1 @blur1 @color1, @x2 @y2 @blur2 @color2, @x3 @y3 @blur3 @color3;
+}
+
+.inner-shadow (@inset:inset, @x:0, @y:0, @blur:0, @color:#000) {
+	box-shadow: @arguments;
+	-moz-box-shadow: @arguments;
+	-webkit-box-shadow: @arguments;
+}
+
+.link-transition (@attr:all, @time: 0.14s, @type: ease-in-out){
+	transition:@attr @time @type;
+	-moz-transition:@attr @time @type;
+	-webkit-transition:@attr @time @type;
+	-o-transition:@attr @time @type;
+	-ms-transition:@attr @time @type;
+}
+
+.transform-style (@attr) {
+  transform-style:@attr;
+  -moz-transform-style:@attr;
+  -webkit-transform-style:@attr;
+  -o-transform-style:@attr;
+  -ms-transform-style:@attr;
+}
+
+.transform (@attr) {
+  transform:@attr;
+  -moz-transform:@attr;
+  -webkit-transform:@attr;
+  -o-transform:@attr;
+  -ms-transform:@attr;
+}
+
+.backface-visibility (@attr) {
+  backface-visibility:@attr;
+  -moz-backface-visibility:@attr;
+  -webkit-backface-visibility:@attr;
+  -o-backface-visibility:@attr;
+  -ms-backface-visibility:@attr;
+}
+
+.perspective (@attr) {
+  perspective:@attr;
+  -moz-perspective:@attr;
+  -webkit-perspective:@attr;
+  -o-perspective:@attr;
+  -ms-perspective:@attr;
+}
+
+.delay-transition (@attr:all, @time: 0.14s, @delay:1s, @type: ease-in-out){
+	transition:@attr @time @delay @type;
+	-moz-transition:@attr @time @delay @type;
+	-webkit-transition:@attr @time @delay @type;
+	-o-transition:@attr @time @delay @type;
+	-ms-transition:@attr @time @delay @type;
+}
+
+.gradient (@colorstart:#8ddfff, @colorend:#fff) {
+	background:@colorstart;
+	background:linear-gradient(top, @colorstart, @colorend);
+	background:-moz-linear-gradient(top, @colorstart, @colorend);
+	background:-webkit-linear-gradient(top, @colorstart, @colorend);
+	background:-o-linear-gradient(top, @colorstart, @colorend);
+	background:-ms-linear-gradient(top, @colorstart, @colorend);
+}
+
+.gradient-hor (@colorstart:#8ddfff, @colorend:#fff) {
+	background:@colorstart;
+	background:linear-gradient(left, @colorstart, @colorend);
+	background:-moz-linear-gradient(left, @colorstart, @colorend);
+	background:-webkit-linear-gradient(left, @colorstart, @colorend);
+	background:-o-linear-gradient(left, @colorstart, @colorend);
+	background:-ms-linear-gradient(left, @colorstart, @colorend);
+}
+
+.gradient-3 (@color1:#ffb49f, @color2:#f4622c, @color3:#e9500a) {
+	background:@color2;
+	background:linear-gradient(top, @color1 0%, @color2 50%, @color3 100%);
+	background:-moz-linear-gradient(top, @color1 0%, @color2 50%, @color3 100%);
+	background:-webkit-linear-gradient(top, @color1 0%, @color2 50%, @color3 100%);
+	background:-o-linear-gradient(top, @color1 0%, @color2 50%, @color3 100%);
+	background:-ms-linear-gradient(top, @color1 0%, @color2 50%, @color3 100%);
+}
+
+.zoom-it (@scale:1.04) {
+	-webkit-transform:scale(@scale) translateZ(0);
+	   -moz-transform:scale(@scale) translateZ(0);
+			transform:scale(@scale) translateZ(0);
+}
+
+.placeholder(@color: #fff) {
+	&:-moz-placeholder {
+		color: @color;
+		opacity: 1;
+	}
+
+	&::-moz-placeholder {
+		color: @color;
+		opacity: 1;
+	}
+
+	&:-ms-input-placeholder {
+		color: @color;
+	}
+
+	&::-webkit-input-placeholder {
+		color: @color;
+	}
+
+	.text-placeholder { color: @color !important; }
+}
+
+.animate-hidden {
+	visibility:hidden;
+	opacity:0;
+}
+
+.animate-visible {
+	visibility:visible;
+	opacity:1;
+}
+
+.force-hardware {
+	-webkit-transform:translate3d(0);
+	   -moz-transform:translate3d(0);
+	        transform:translate3d(0);
+}
+
+.img-centered-in-parent {
+	display:block;
+	min-width:100%;
+	height:100%;
+	position:absolute;
+	top:-9999px;
+	bottom:-9999px;
+	left:-9999px;
+	right:-9999px;
+	margin:auto;
+}
